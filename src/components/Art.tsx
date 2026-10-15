@@ -2,7 +2,7 @@ import { useId } from 'react'
 import type { ArtKind } from '../data/products'
 
 // Drawn stand-ins for product photos. A client site would use real photography here.
-const GOLD = '#c9a24a'
+const GOLD = '#dba51c'
 
 function shade(hex: string, amt: number) {
   const n = parseInt(hex.slice(1), 16)
@@ -72,8 +72,8 @@ export function Art({ kind, colour = '#e6dcc6', tint = '#5b3a29', label }: { kin
   return (
     <svg viewBox="0 0 400 500" role="img" aria-label={label} className="art" preserveAspectRatio="xMidYMid slice">
       {weave}
-      <rect width="400" height="500" fill="#eef0f6" />
-      <ellipse cx="200" cy="440" rx="130" ry="14" fill="#1b2250" opacity="0.08" />
+      <rect width="400" height="500" fill="#e4e9df" />
+      <ellipse cx="200" cy="440" rx="130" ry="14" fill="#14231c" opacity="0.1" />
       {body}
     </svg>
   )

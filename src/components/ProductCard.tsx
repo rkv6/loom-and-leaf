@@ -12,6 +12,7 @@ export function ProductCard({ p }: { p: Product }) {
   const from = p.packs ? 'From ' : ''
   return (
     <Link to={`/product/${p.id}`} className={`card${p.stock === 0 ? ' is-out' : ''}`}>
+      <span className="hole" aria-hidden="true" />
       <div className="card-art">
         <Art kind={p.art} colour={COLOURS[0].hex} tint={p.tint} label={`${p.name}`} />
         <StockBadge p={p} />

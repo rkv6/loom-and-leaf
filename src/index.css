@@ -12,8 +12,8 @@
   --madder: #b42a1f;
   --leaf: #3f6b4f;
   --line: rgba(20, 35, 28, 0.2);
-  --serif: 'Rozha One', Georgia, serif;
-  --sans: 'Bricolage Grotesque Variable', system-ui, sans-serif;
+  --serif: 'Anybody Variable', 'Arial Black', system-ui, sans-serif;
+  --sans: 'Instrument Sans', system-ui, sans-serif;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --pad: clamp(1.25rem, 5vw, 4rem);
   --max: 78rem;
@@ -32,7 +32,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .skip { position: absolute; left: 1rem; top: -4rem; background: var(--ink); color: #fff; padding: 0.6rem 1rem; z-index: 100; }
 .skip:focus { top: 1rem; }
 
-h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.1; margin: 0; text-wrap: balance; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 800; font-stretch: 118%; line-height: 1.05; letter-spacing: -0.01em; margin: 0; text-wrap: balance; }
 .page-title { font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 1.5rem; }
 .h3 { font-size: 1.4rem; margin: 2rem 0 0.9rem; }
 .lede { font-size: 1.15rem; max-width: 52ch; }
@@ -43,7 +43,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.1; marg
 .demo-bar { margin: 0; background: var(--ink); color: var(--gold); text-align: center; font-size: 0.9rem; padding: 0.45rem var(--pad); }
 
 .header { position: sticky; top: 0; z-index: 20; display: flex; align-items: center; gap: 1.5rem; padding: 0.9rem max(var(--pad), calc((100vw - var(--max)) / 2 + var(--pad))); background: rgba(233, 236, 229, 0.96); backdrop-filter: blur(8px); border-bottom: 2px solid var(--ink); }
-.logo { font-family: var(--serif); font-size: 1.7rem; text-decoration: none; margin-right: auto; white-space: nowrap; }
+.logo { font-family: var(--serif); font-weight: 900; font-stretch: 125%; font-size: 1.35rem; text-decoration: none; margin-right: auto; white-space: nowrap; }
 .logo span { color: var(--red); }
 .nav { display: flex; gap: 1.5rem; font-weight: 500; }
 .nav a { text-decoration: none; padding: 0.5rem 0; border-bottom: 2px solid transparent; }
@@ -69,12 +69,12 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.1; marg
 .section { max-width: var(--max); margin: 0 auto; padding: clamp(2.5rem, 7vw, 5rem) var(--pad); }
 .narrow { max-width: 44rem; }
 .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: 1.5rem; }
-.section-head h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); }
+.section-head h2 { font-size: clamp(1.4rem, 4vw, 2.3rem); }
 .more { font-weight: 600; text-underline-offset: 0.2em; }
 
 /* Hero: a drenched madder field, a hanging tag, and a woven stripe edge */
 .hero { position: relative; background: var(--red); color: #fff; padding: clamp(2.5rem, 7vw, 5.5rem) max(var(--pad), calc((100vw - var(--max)) / 2 + var(--pad))); padding-right: calc(max(var(--pad), calc((100vw - var(--max)) / 2 + var(--pad))) + clamp(2rem, 6vw, 5rem)); display: grid; grid-template-columns: 1.5fr 1fr; gap: clamp(2rem, 4vw, 3rem); align-items: center; overflow: hidden; min-height: min(78vh, 46rem); }
-.hero h1 { font-size: clamp(2.6rem, 6vw, 5rem); line-height: 1.02; margin-bottom: 1.5rem; animation: rise 0.8s var(--ease) both; }
+.hero h1 { font-size: clamp(2.3rem, 5.2vw, 4.4rem); line-height: 0.98; font-weight: 900; font-stretch: 125%; letter-spacing: -0.03em; margin-bottom: 1.5rem; animation: rise 0.8s var(--ease) both; }
 .hero p { max-width: 44ch; font-size: 1.2rem; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
 .hero-art { position: relative; justify-self: center; width: min(100%, 22rem); padding-top: clamp(4rem, 12vh, 8rem); }
@@ -219,7 +219,8 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.1; marg
 @media (max-width: 960px) {
   .grid { grid-template-columns: repeat(2, 1fr); }
   .hero, .pdp-grid, .co-grid, .split { grid-template-columns: 1fr; }
-  .hero-art { width: min(100%, 17rem); }
+  .hero-art { width: min(100%, 17rem); padding-top: 4.5rem; }
+  .hero-art::before { height: 3.4rem; bottom: calc(100% - 4.5rem - 1.1rem); }
   .tile-cloth, .tile-tea { padding-inline: var(--pad); }
   .pdp-art { position: static; width: min(100%, 30rem); margin-inline: auto; }
   .summary { position: static; }

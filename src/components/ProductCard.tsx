@@ -19,7 +19,7 @@ export function ProductCard({ p }: { p: Product }) {
       </div>
       <h3>{p.name}</h3>
       <p className="card-short">{p.short}</p>
-      <p className="card-price">{from}{rupees(p.price)}</p>
+      <p className="card-price"><span>{from.toLowerCase()}{rupees(p.price)}</span><span className="card-view" aria-hidden="true">View tag</span></p>
     </Link>
   )
 }

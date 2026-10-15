@@ -27,8 +27,8 @@ export function Footer() {
     <footer className="footer">
       <div className="kasavu" aria-hidden="true" />
       <div className="footer-in">
-        <p>Loom &amp; Leaf is an invented shop. This concept store was designed and built by rk-studio.</p>
-        <a href="https://portfolio-rkv6.vercel.app" target="_blank" rel="noopener noreferrer">See more work by Rithin K Varghese</a>
+        <div><p className="footer-logo">Loom <span>&amp;</span> Leaf</p><p>Loom &amp; Leaf is an invented shop. This concept store was designed and built by rk-studio.</p></div>
+        <a href="https://portfolio-rkv6.vercel.app" target="_blank" rel="noopener noreferrer">See more work by Rithin K Varghese →</a>
       </div>
     </footer>
   )
